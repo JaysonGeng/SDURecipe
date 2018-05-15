@@ -13,17 +13,15 @@
 <form action="./shoucangf.jsp" method="" id="test_form">
     <input type="hidden" name="ids" id="idss" value=""/>
     <input type="hidden" name="idl" id="idls" value=""/>
-    <input type="hidden" name="idsn" id="idssn" value=""/>
-    <input type="hidden" name="idln" id="idlsn" value=""/>
 </form>
 
 <script>
     var hisTime;
     var hisItem;
+
     var ids;
     var idl;
-    var idsn;
-    var idln;
+
     function init() {
         hisTime = [];
         hisItem = [];
@@ -36,21 +34,16 @@
             }
         }
     }
-
     init();
     ids = "";
     idl = "";
-    idsn = "";
-    idln = "";
     if (hisItem != null) {
         for (var j = 0; j < localStorage.length; j++) {
             if ((localStorage.key(j).indexOf("s") == 0)) {
-                idsn+=localStorage.key(j)+"-";
-                ids+=localStorage.getItem(localStorage.key(j))+"-";
+                ids+=localStorage.key(j)+","+localStorage.getItem(localStorage.key(j))+"-";
             }
             if ((localStorage.key(j).indexOf("l") == 0)) {
-                idln+=localStorage.key(j)+"-";
-                idl+=localStorage.getItem(localStorage.key(j))+"-";
+                idl+=localStorage.key(j)+","+localStorage.getItem(localStorage.key(j))+"-";
             }
         }
     }
@@ -58,8 +51,6 @@
     var form = document.getElementById('test_form');
     document.getElementById("idss").value = ids;
     document.getElementById("idls").value = idl;
-    document.getElementById("idssn").value = idsn;
-    document.getElementById("idlsn").value = idln;
     console.log(ids+"ids");
     console.log(idl+"idl");
     form.submit();

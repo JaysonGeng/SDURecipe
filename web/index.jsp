@@ -66,7 +66,7 @@
                 <span class="icon icon-app"></span>
                 <span class="tab-label">菜谱</span>
             </a>
-            <a class="tab-item external" href="./shoucangf.jsp">
+            <a class="tab-item external" href="./gotoshoucang.jsp">
                 <span class="icon icon-star"></span>
                 <span class="tab-label">收藏</span>
             </a>

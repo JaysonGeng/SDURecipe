@@ -14,6 +14,15 @@ public class Course {
     private String cookingTechniques;
     private byte[] pic;
     private String reason;
+    private String loc_name;
+
+    public String getLoc_name() {
+        return loc_name;
+    }
+
+    public void setLoc_name(String loc_name) {
+        this.loc_name = loc_name;
+    }
 
     public String getReason() {
         return reason;

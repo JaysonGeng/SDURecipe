@@ -14,24 +14,31 @@
     CuorseDao cuorseDao = new CuorseDao();
 
     String idss = request.getParameter("ids");
-    String[] ids = idss.split("-");
-    String idls = request.getParameter("idl");
-    String[] idl = idls.split("-");
+    System.out.println("idss   "+idss);
 
-    HashMap<String,String> hms =new HashMap<String,String>();
-    HashMap<String,String> hml =new HashMap<String,String>();
+    String idls = request.getParameter("idl");
+    System.out.println("idls   "+idls);
+
+    String[] ids = idss.split("-");
+
+    String[] idl = idls.split("-");
 
 
     ArrayList<Course> coursess = new ArrayList<Course>();
     ArrayList<Course> coursesl = new ArrayList<Course>();
 
     for (String index : ids) {
-
-        coursess.add(cuorseDao.getCourseById(Integer.valueOf(index)));
+        String[] idsn =index.split(",");
+        course = cuorseDao.getCourseById(Integer.valueOf(idsn[1]));
+        course.setLoc_name(idsn[0]);
+        coursess.add(course);
     }
 
     for (String index : idl) {
-        coursesl.add(cuorseDao.getCourseById(Integer.valueOf(index)));
+        String[] idln =index.split(",");
+        course = cuorseDao.getCourseById(Integer.valueOf(idln[1]));
+        course.setLoc_name(idln[0]);
+        coursesl.add(course);
     }
 %>
 <html>
@@ -73,7 +80,7 @@
                 <span class="icon icon-app"></span>
                 <span class="tab-label">菜谱</span>
             </a>
-            <a class="tab-item external active" href="./shoucangf.jsp">
+            <a class="tab-item external active" href="./gotoshoucang.jsp">
                 <span class="icon icon-star"></span>
                 <span class="tab-label">收藏</span>
             </a>
@@ -208,7 +215,7 @@
 </script>
 <script>
     function del(id) {
-        localStorage.removeItem(localStorage);
+        localStorage.removeItem(id);
     }
 </script>
 <script>
@@ -238,7 +245,7 @@
         '</div>' +
         '<div class="item-text">配料：<%=cs.getBatching()%></div>' +
         '</div></a><div class="swipeout-actions-right">' +
-        '<a href="#" onclick="del(\'<%=cs.getId()%>\')" class="swipeout-delete">删除</a>' +
+        '<a href="#" onclick="del(\'<%=cs.getLoc_name()%>\')" class="swipeout-delete">删除</a>' +
         '</div>' +
         '</li>';
     ulll.appendChild(liii);
@@ -274,14 +281,13 @@
         '</div>' +
         '<div class="item-text">配料：<%=cl.getBatching()%></div>' +
         '</div></a><div class="swipeout-actions-right">' +
-        '<a href="#" onclick="del(\'<%=cl.getId()%>\')" class="swipeout-delete">删除</a>' +
+        '<a href="#" onclick="del(\'<%=cl.getLoc_name()%>\')" class="swipeout-delete">删除</a>' +
         '</div>' +
         '</li>';
     ull.appendChild(lii);
     <%
         }
     %>
-
 
 </script>
 
