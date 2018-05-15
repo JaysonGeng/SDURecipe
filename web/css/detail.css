@@ -1,0 +1,132 @@
+
+.swiper-container{
+    padding-bottom: 0 !important;
+}
+.content-padded .shop_title{
+    font-size: 1rem;
+    font-weight: lighter;
+    margin: 6px auto 10px auto; !important;
+}
+.content-padded{
+    background: #ffffff;
+    padding: .5em;
+    margin: 0 !important;
+    font-size: .9em;
+}
+.mui-price{
+    color: #dd2727;
+}
+.mui-price .mui-price-integer{
+    font-size: 24px;
+}
+.mui-price .tag{
+    background: #fb6878;
+    color: #fff;
+    padding: 3px;
+    font-size: .2rem;
+}
+.ui-label{
+    line-height: .12rem;
+    height: .12rem;
+    color: #888;
+    font-size: 0.9em;
+}
+.shop_Sales{
+    margin-top: 0.2em;
+    border-top: 1px solid #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
+    font-size: 0.7em;
+    text-align: left;
+    height: auto;
+    color: #999;
+    font-weight: lighter;
+}
+.nav-menu{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    z-index: 999;
+}
+.nav-menu ul{
+    margin: 0;
+    padding: 0;
+}
+.nav-menu ul li{
+    float: left;
+    list-style: none;
+    border-right: 1px solid #e0e0e0;
+}
+
+
+.nav-menu .shopping_cart,
+.nav-menu .buy_shop{
+    padding: 5px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #ffffff;
+    width: 100%;
+    height: 2.5em;
+    line-height: 1.8em;
+}
+.nav-menu .shopping_cart{
+    background: #E82100;
+}
+.nav-menu .buy_shop{
+    background: #DD2727;
+}
+
+.buttons-tab .button.active {
+    color: #ff0000;
+    border-color: #ff0000;
+    z-index: 100;
+}
+.content{
+    padding-bottom: 55px;
+}
+
+.absolutely{
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px;
+}
+
+.buttons-tab{
+    position: fixed !important;
+    width: 100%;
+    z-index: 9999;
+}
+.tabs .tab{
+    margin-top:10%;
+}
+.list-block{
+    margin: 0 !important;
+}
+.list-block ul{
+    padding-bottom: 10px !important;
+}
+.dianp_info{
+    text-align: center;
+    padding: 5px 8px;
+}
+.list-block .item-inner:after{
+    background-color:  #fff !important;
+}
+.content-block-title{
+    text-align: center;
+    margin: .85rem .75rem .5rem;
+}
+.info{
+    border-bottom: 1px solid #eaeaea;
+    padding: 8px 0;
+}
+.info span{
+    margin-bottom: 8px;
+}
+.in-block{
+    padding-bottom: 0.1rem;
+}
+.in-block a{
+    display: inline-block;
+    margin: 0.2rem 0.4rem 0.1rem 0.4rem;
+}

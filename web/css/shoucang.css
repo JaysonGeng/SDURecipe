@@ -1,0 +1,41 @@
+.card-magin{
+    margin:0.1rem;
+}
+.feedback{
+    outline: #E82100;
+    line-height: 35px;
+    width: 300px;
+    height:8rem;
+    background-color: white;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #1c1d1f;
+    margin:1rem auto 1rem auto;
+    margin-bottom: 0;
+}
+
+.shuoming{
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+    font-size: 0.7rem;
+    margin-top: 0;
+    text-align: left;
+    margin-bottom: 0;
+}
+.button-magin{
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.mymagin{
+    margin:0.5rem 1.3rem 1rem 1.3rem;
+    color: #000000;
+}
+.my-footer {
+    border-top: 1px solid #eeeeee;
+    padding: 10px 0;
+    margin-top: 10px;
+    text-align: center;
+    bottom: 0;
+    background-color: white;
+}
