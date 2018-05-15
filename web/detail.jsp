@@ -44,7 +44,7 @@
             <div class="content-padded">
                 <div class="card demo-card-header-pic">
                     <div valign="bottom" class="card-header color-white no-border no-padding">
-                        <img class='card-cover' src="/Servlet.FindBookPictureServlet?bookId=<%=course.getId()%>" alt="">
+                        <img class='card-cover' src="<%=course.getPic()%>" alt="">
                     </div>
                 </div>
                 <div class="row">

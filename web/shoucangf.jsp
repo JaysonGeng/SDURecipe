@@ -14,32 +14,50 @@
     CuorseDao cuorseDao = new CuorseDao();
 
     String idss = request.getParameter("ids");
-    System.out.println("idss   "+idss);
+    System.out.println("idss   " + idss);
 
     String idls = request.getParameter("idl");
-    System.out.println("idls   "+idls);
+    System.out.println("idls   " + idls);
 
-    String[] ids = idss.split("-");
-
-    String[] idl = idls.split("-");
-
+    String[] ids = null;
+    String[] idl = null;
+    if (idss != null) {
+        ids = idss.split("-");
+    }
+    if (idls != null) {
+        idl = idls.split("-");
+    }
 
     ArrayList<Course> coursess = new ArrayList<Course>();
     ArrayList<Course> coursesl = new ArrayList<Course>();
 
-    for (String index : ids) {
-        String[] idsn =index.split(",");
-        course = cuorseDao.getCourseById(Integer.valueOf(idsn[1]));
-        course.setLoc_name(idsn[0]);
-        coursess.add(course);
+    if (ids != null) {
+        for (String index : ids) {
+            if (index != null && !index.equals("")) {
+                System.out.println("index ids: " + index);
+                String[] idsn = index.split(",");
+                course = cuorseDao.getCourseById(Integer.valueOf(idsn[1]));
+                course.setLoc_name(idsn[0]);
+                coursess.add(course);
+            }
+
+        }
     }
 
-    for (String index : idl) {
-        String[] idln =index.split(",");
-        course = cuorseDao.getCourseById(Integer.valueOf(idln[1]));
-        course.setLoc_name(idln[0]);
-        coursesl.add(course);
+
+    if (idl != null) {
+        for (String index : idl) {
+            if (index != null && !index.equals("")) {
+                System.out.println("index idl: " + index);
+                String[] idln = index.split(",");
+                course = cuorseDao.getCourseById(Integer.valueOf(idln[1]));
+                course.setLoc_name(idln[0]);
+                coursesl.add(course);
+            }
+
+        }
     }
+
 %>
 <html>
 <head>
@@ -157,15 +175,22 @@
 
                                     </ul>
                                 </div>
-                                <a id="feedback" class="feed button button-fill button-big button-magin">提交</a>
+                                <a href="" id="feedback" class="feed button button-fill button-big button-magin">提交</a>
                             </div>
                             <footer style="bottom: 0rem ; text-align: center">学生在线 © 版权所有</footer>
                             <script>
 
                                 var input = document.getElementById('feedbackinput');
+                                var qq = document.getElementById("qq");
+                                var phone =document.getElementById("phone");
+
                                 input.value = "";
                                 input.onfocus = function () {
+                                    window.location.href="./"
+
                                     input.value = "";
+                                    qq.value = "";
+                                    phone.value = "";
                                 }
                             </script>
                         </div>
@@ -180,7 +205,9 @@
 </div>
 <!--内容结束-->
 
-
+<script>
+    $.config = {router: false}
+</script>
 <script type="text/javascript" src="js/framework7.js"></script>
 <!-- Path to your app js-->
 <script type="text/javascript" src="js/upscroller.js"></script>
@@ -227,17 +254,20 @@
     var liii = document.createElement('li');
 
     liii.innerHTML = '<li class="swipeout">' +
-        '<a href="/Servlet.Detail?id=<%=cs.getId()%>" class="item-link item-content">' +
-        '<div class="item-media align-center" style="text-align: center">' +
-        '<img src="/Servlet.FindBookPictureServlet?bookId=<%=cs.getId()%>" style="width: 4.5rem;margin-top: 0.5rem">' +
-        '</div><div class="item-inner"><div class="item-title-row">' +
-        '<div class="item-title" style="color: #3d4541"><%=cs.getName()%></div>' +
-        '<div class="item-after"><span class="item-price">￥<%=cs.getPrice()%></span></div>' +
-        '</div><div class="item-subtitle" style="color: #3d4541">' +
+        '<a href="./Servlet.Detail?id=<%=cs.getId()%>" class="item-link item-content external">' +
+        '<div class="item-media">' +
+        '<img src="<%=cs.getPic()%>" style=\'width: 4rem;\'>' +
+        '</div>' +
+        '<div class="item-inner">' +
+        '<div class="item-title-row">' +
+        '<div class="item-title"><%=cs.getName()%></div>' +
+        '<div class="item-after">￥<%=cs.getPrice()%></div>' +
+        '</div>' +
+        '<div class="item-subtitle">' +
         <%
-           String[] tags = cs.getTag().split("\\|");
-           for (String tag : tags) {
-       %>
+            String[] tags = cs.getTag().split("\\|");
+            for (String tag : tags) {
+        %>
         '<%=tag%>&nbsp;&nbsp;' +
         <%
          }
@@ -263,17 +293,20 @@
     var lii = document.createElement('li');
 
     lii.innerHTML = '<li class="swipeout">' +
-        '<a href="/Servlet.Detail?id=<%=cl.getId()%>" class="item-link item-content">' +
-        '<div class="item-media align-center" style="text-align: center">' +
-        '<img src="/Servlet.FindBookPictureServlet?bookId=<%=cl.getId()%>" style="width: 4.5rem;margin-top: 0.5rem">' +
-        '</div><div class="item-inner"><div class="item-title-row">' +
-        '<div class="item-title" style="color: #3d4541"><%=cl.getName()%></div>' +
-        '<div class="item-after"><span class="item-price">￥<%=cl.getPrice()%></span></div>' +
-        '</div><div class="item-subtitle" style="color: #3d4541">' +
+        '<a href="./Servlet.Detail?id=<%=cl.getId()%>" class="item-link item-content external">' +
+        '<div class="item-media">' +
+        '<img src="<%=cl.getPic()%>" style=\'width: 4rem;\'>' +
+        '</div>' +
+        '<div class="item-inner">' +
+        '<div class="item-title-row">' +
+        '<div class="item-title"><%=cl.getName()%></div>' +
+        '<div class="item-after">￥<%=cl.getPrice()%></div>' +
+        '</div>' +
+        '<div class="item-subtitle">' +
         <%
-           String[] tags = cl.getTag().split("\\|");
-           for (String tag : tags) {
-       %>
+            String[] tags = cl.getTag().split("\\|");
+            for (String tag : tags) {
+        %>
         '<%=tag%>&nbsp;&nbsp;' +
         <%
          }

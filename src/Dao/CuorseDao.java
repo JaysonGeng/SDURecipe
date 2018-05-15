@@ -33,7 +33,7 @@ public class CuorseDao {
                 item.setBatching(rs.getString("batching"));
                 item.setTag(rs.getString("tag"));
                 item.setCookingTechniques(rs.getString("cookingTechniques"));
-                item.setPic(rs.getBytes("picture"));
+                item.setPic(rs.getString("picture"));
                 list.add(item);
             }
             return list;
@@ -108,7 +108,7 @@ public class CuorseDao {
                 item.setBatching(rs.getString("batching"));
                 item.setTag(rs.getString("tag"));
                 item.setCookingTechniques(rs.getString("cookingTechniques"));
-                item.setPic(rs.getBytes("picture"));
+                item.setPic(rs.getString("picture"));
                 return item;
             } else {
                 return null;
@@ -160,7 +160,7 @@ public class CuorseDao {
                 item.setBatching(rs.getString("batching"));
                 item.setTag(rs.getString("tag"));
                 item.setCookingTechniques(rs.getString("cookingTechniques"));
-                item.setPic(rs.getBytes("picture"));
+                item.setPic(rs.getString("picture"));
                 list.add(item);
             }
             return list;
@@ -208,7 +208,7 @@ public class CuorseDao {
                 item.setBatching(rs.getString("batching"));
                 item.setTag(rs.getString("tag"));
                 item.setCookingTechniques(rs.getString("cookingTechniques"));
-                item.setPic(rs.getBytes("picture"));
+                item.setPic(rs.getString("picture"));
                 list.add(item);
             }
             return list;

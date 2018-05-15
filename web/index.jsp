@@ -80,7 +80,7 @@
                 <ul class="clearfix carousel_img" style="background-color: #ffffff;margin: 0">
 
                     <li>
-                        <a href="javascript:;"><img style="height: 10rem;width: 100%" src="#"
+                        <a href="javascript:;"><img style="height: 10rem;width: 100%" src="./images/shiguobanfan.png"
                                                     alt=""></a>
                     </li>
                     <%
@@ -90,9 +90,9 @@
                                 break;
                     %>
                     <li>
-                        <a href="/Servlet.Detail?id=<%=cc.getId()%>">
+                        <a href="./Servlet.Detail?id=<%=cc.getId()%>">
                             <img style="height: 10rem;width: 100%"
-                                 src="/Servlet.FindBookPictureServlet?bookId=<%=cc.getId()%>"
+                                 src="<%=cc.getPic()%>"
                                  alt="<%=cc.getName()%>"></a>
                     </li>
                     <%
@@ -121,7 +121,7 @@
 
                     %>
                     <li class="col-25">
-                        <a href="/Servlet.Classify?classify=<%=s[(i - 1) * 4 + j]%>">
+                        <a href="./Servlet.Classify?classify=<%=s[(i - 1) * 4 + j]%>">
                             <p style="color: #555555"><%=s[(i - 1) * 4 + j]%>
                             </p>
                         </a>
@@ -152,9 +152,9 @@
                                 %>
 
                                 <li>
-                                    <a href="/Servlet.Detail?id=<%=c.getId()%>" class="item-link item-content">
+                                    <a href="./Servlet.Detail?id=<%=c.getId()%>" class="item-link item-content">
                                         <div class="item-media"><img
-                                                src="/Servlet.FindBookPictureServlet?bookId=<%=c.getId()%>"
+                                                src="<%=c.getPic()%>"
                                                 style='width: 4rem;'>
                                         </div>
                                         <div class="item-inner">
@@ -360,7 +360,7 @@
             var strs = new Array();
             strs = str.split("|");
             for (var i = 0; i < strs.length; i++) {
-                s += "<a href='/Servlet.ResultServlet?name=" + strs[i] + "' class='button button-warning button-round' style='display: inline-block;margin: 0.2rem'>" + strs[i] + "</a>";
+                s += "<a href='./Servlet.ResultServlet?name=" + strs[i] + "' class='button button-warning button-round' style='display: inline-block;margin: 0.2rem'>" + strs[i] + "</a>";
             }
             $("#lssslb").append(s + '<a href="#" class="button button-danger button-round scls" style="margin: 2rem 2rem 1rem 2rem" onclick="clearHistory();">清除历史记录</a>');
         }

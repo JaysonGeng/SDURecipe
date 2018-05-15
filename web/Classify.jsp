@@ -261,9 +261,9 @@
         %>
         var name = '#w' + <%=ccc.getWindow()%>;
         var li = '<li>' +
-            '<a href="/Servlet.Detail?id=<%=ccc.getId()%>" class="item-link item-content">' +
+            '<a href="./Servlet.Detail?id=<%=ccc.getId()%>" class="item-link item-content">' +
             '<div class="item-media">' +
-            '<img src="/Servlet.FindBookPictureServlet?bookId=<%=ccc.getId()%>" style=\'width: 4rem;\'>' +
+            '<img src="<%=ccc.getPic()%>" style=\'width: 4rem;\'>' +
             '</div>' +
             '<div class="item-inner">' +
             '<div class="item-title-row">' +

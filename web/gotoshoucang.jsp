@@ -10,7 +10,7 @@
 <head>
 </head>
 <!--HTML-->
-<form action="./shoucangf.jsp" method="" id="test_form">
+<form action="./shoucangf.jsp" method="POST" id="test_form">
     <input type="hidden" name="ids" id="idss" value=""/>
     <input type="hidden" name="idl" id="idls" value=""/>
 </form>
@@ -55,7 +55,9 @@
     console.log(idl+"idl");
     form.submit();
 </script>
-
+<script>
+    $.config = {router: false}
+</script>
 </body>
 
 </html>

@@ -12,7 +12,7 @@ public class Course {
     private String tag;
     private String batching;
     private String cookingTechniques;
-    private byte[] pic;
+    private String pic;
     private String reason;
     private String loc_name;
 
@@ -105,11 +105,11 @@ public class Course {
         this.tag = tag;
     }
 
-    public byte[] getPic() {
+    public String getPic() {
         return pic;
     }
 
-    public void setPic(byte[] pic) {
+    public void setPic(String pic) {
         this.pic = pic;
     }
 

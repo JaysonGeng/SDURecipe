@@ -57,21 +57,21 @@
                 <div class="card-header">楼层</div>
                 <div class="card-content" style="text-align: center">
                     <div class="row">
-                        <a href="/Servlet.Classify?classify=负一层">
+                        <a href="./Servlet.Classify?classify=负一层">
                             <img class="row-image-caipu" src="./images/floor-1.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=一层">
+                        <a href="./Servlet.Classify?classify=一层">
                             <img class="row-image-caipu" src="./images/floor1.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=二层">
+                        <a href="./Servlet.Classify?classify=二层">
                             <img class="row-image-caipu" src="./images/floor2.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=三层">
+                        <a href="./Servlet.Classify?classify=三层">
                             <img class="row-image-caipu" src="./images/floor3.png" >
                         </a>
                     </div>
                     <div class="row">
-                        <a href="/Servlet.Classify?classify=四层">
+                        <a href="./Servlet.Classify?classify=四层">
                             <img class="row-image-caipu" src="./images/floor4.png" >
                         </a>
                         <img class="row-image-caipu" src="./images/kong.png" >
@@ -86,38 +86,38 @@
                 <div class="card-header">菜系</div>
                 <div class="card-content" style="text-align: center">
                     <div class="row">
-                        <a href="/Servlet.Classify?classify=川菜">
+                        <a href="./Servlet.Classify?classify=川菜">
                             <img class="row-image-caipu" src="./images/chuan.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=鲁菜">
+                        <a href="./Servlet.Classify?classify=鲁菜">
                             <img class="row-image-caipu" src="./images/lu.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=粤菜">
+                        <a href="./Servlet.Classify?classify=粤菜">
                             <img class="row-image-caipu" src="./images/yu.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=苏菜">
+                        <a href="./Servlet.Classify?classify=苏菜">
                             <img class="row-image-caipu" src="./images/su.png" >
                         </a>
                     </div>
                     <div class="row">
-                        <a href="/Servlet.Classify?classify=浙菜">
+                        <a href="./Servlet.Classify?classify=浙菜">
                             <img class="row-image-caipu" src="./images/zhe.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=闽菜">
+                        <a href="./Servlet.Classify?classify=闽菜">
                             <img class="row-image-caipu" src="./images/min.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=湘菜">
+                        <a href="./Servlet.Classify?classify=湘菜">
                             <img class="row-image-caipu" src="./images/xiang.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=徽菜">
+                        <a href="./Servlet.Classify?classify=徽菜">
                             <img class="row-image-caipu" src="./images/hui.png" >
                         </a>
                     </div>
                     <div class="row">
-                        <a href="/Servlet.Classify?classify=西餐">
+                        <a href="./Servlet.Classify?classify=西餐">
                             <img class="row-image-caipu" src="./images/xican.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=清真">
+                        <a href="./Servlet.Classify?classify=清真">
                             <img class="row-image-caipu" src="./images/qingzhen.png" >
                         </a>
                         <img class="row-image-caipu" src="./images/kong.png" >
@@ -131,16 +131,16 @@
                 <div class="card-header">场景</div>
                 <div class="card-content" style="text-align: center">
                     <div class="row">
-                        <a href="/Servlet.Classify?classify=早餐">
+                        <a href="./Servlet.Classify?classify=早餐">
                             <img class="row-image-caipu" src="./images/zaocan.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=午餐">
+                        <a href="./Servlet.Classify?classify=午餐">
                             <img class="row-image-caipu" src="./images/wucan.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=晚餐">
+                        <a href="./Servlet.Classify?classify=晚餐">
                             <img class="row-image-caipu" src="./images/wancan.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=宵夜">
+                        <a href="./Servlet.Classify?classify=宵夜">
                             <img class="row-image-caipu" src="./images/xiaoye.png" >
                         </a>
                     </div>
@@ -152,27 +152,27 @@
                 <div class="card-header">普通菜品</div>
                 <div class="card-content" style="text-align: center">
                     <div class="row" >
-                        <a href="/Servlet.Classify?classify=家常菜">
+                        <a href="./Servlet.Classify?classify=家常菜">
                             <img class="row-image-caipu" src="./images/jiachangcai.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=素菜">
+                        <a href="./Servlet.Classify?classify=素菜">
                             <img class="row-image-caipu" src="./images/sucai.png">
                         </a>
-                        <a href="/Servlet.Classify?classify=面食">
+                        <a href="./Servlet.Classify?classify=面食">
                             <img class="row-image-caipu" src="./images/mianshi.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=冷菜">
+                        <a href="./Servlet.Classify?classify=冷菜">
                             <img class="row-image-caipu" src="./images/lengcai.png" >
                         </a>
                     </div>
                     <div class="row">
-                        <a href="/Servlet.Classify?classify=汤">
+                        <a href="./Servlet.Classify?classify=汤">
                             <img class="row-image-caipu" src="./images/tang.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=粥">
+                        <a href="./Servlet.Classify?classify=粥">
                             <img class="row-image-caipu" src="./images/zhou.png" >
                         </a>
-                        <a href="/Servlet.Classify?classify=下饭菜">
+                        <a href="./Servlet.Classify?classify=下饭菜">
                             <img class="row-image-caipu" src="./images/xiafancai.png" >
                         </a>
                         <img class="row-image-caipu" src="./images/kong.png" >
