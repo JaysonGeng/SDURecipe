@@ -65,11 +65,11 @@
         </nav>
 
         <!-- 这里是页面内容区 -->
-        <div class="content">
-            <div>
+        <div class="content" style="background-color: #fafafa">
+            <div >
                 <div class="card" style="margin: 0rem">
                     <div class="card-header">
-                        <span><i class="fa fa-window-maximize" style="color: #e82100"></i>
+                        <span><i class="fa fa-window-maximize" style="color: #e82100;"></i>
                         <span style="left: 2rem">窗口</span></span>
                     </div>
                     <div class="content-block">
@@ -82,7 +82,7 @@
                             <a href="#tab6" class="tab-link button">⑥</a>
                         </div>
                     </div>
-                    <div class="content-block" style="padding-top: 0.4rem; margin-left: 0.8rem;margin-right: 0.8rem">
+                    <div class="content-block" style="padding-top: 0.4rem;padding-bottom: 0.5rem; margin-left: 0.8rem;margin-right: 0.8rem">
                         <div class="buttons-row">
                             <a href="#tab7" class="tab-link button">⑦</a>
                             <a href="#tab8" class="tab-link button">⑧</a>

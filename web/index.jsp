@@ -241,7 +241,7 @@
                 <div class="searchbar">
                     <a class="searchbar-cancel close-popup">取消</a>
                     <div class="search-input">
-                        <form name="input" action="/Servlet.ResultServlet" method="get">
+                        <form name="input" action="./Servlet.ResultServlet" method="get">
                             <label class="icon icon-search" for="search"></label>
                             <input type="search" id='search' name="name" results="0" onsearch="SiteSearch()"
                                    placeholder='输入关键字...'/>

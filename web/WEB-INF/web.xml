@@ -11,14 +11,7 @@
         <servlet-name>Detail</servlet-name>
         <url-pattern>/Servlet.Detail</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>FindBookPictureServlet</servlet-name>
-        <servlet-class>Servlet.FindBookPictureServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>FindBookPictureServlet</servlet-name>
-        <url-pattern>/Servlet.FindBookPictureServlet</url-pattern>
-    </servlet-mapping>
+
     <servlet>
         <servlet-name>Classify</servlet-name>
         <servlet-class>Servlet.Classify</servlet-class>

@@ -55,7 +55,7 @@
                                 <li>
                                     <a href="./Servlet.Detail?id=<%=c.getId()%>" class="item-link item-content">
                                         <div class="item-media">
-                                            <img src="./Servlet.FindBookPictureServlet?bookId=<%=c.getId()%>"
+                                            <img src="<%=c.getPic()%>"
                                                  style='width: 4rem;'>
                                         </div>
                                         <div class="item-inner">

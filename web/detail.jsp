@@ -11,6 +11,8 @@
     String id = (String) request.getAttribute("id");
     CuorseDao cuorseDao = new CuorseDao();
     Course course = cuorseDao.getCourseById(Integer.valueOf(id));
+    String f = (String) request.getAttribute("f");
+
 %>
 <html>
 <head>
@@ -33,7 +35,7 @@
         <!-- 标题栏 -->
         <header class="bar bar-nav " style="background-color: #e82100">
             <a class="button button-link button-nav pull-left back" style="color: white"
-               onClick="javascript :window.history.back(-1); return false;">
+               onClick="back()">
                 <span class="icon icon-left"></span>
                 返回
             </a>
@@ -118,7 +120,18 @@
 <script>$.config = {router: false}</script>
 <script type='text/javascript' src='./dist/js/sm.js' charset='utf-8'></script>
 <script type='text/javascript' src='./dist/js/sm-extend.js' charset='utf-8'></script>
+<script>
+    function back() {
+        var f ="<%=f%>";
+        if(f==="s"){
+            window.location.href="gotoshoucang.jsp";
+        }
+        else {
+            window.history.back(-1); return false;
+        }
 
+    }
+</script>
 <script>
 
     /*搜索记录相关*/
@@ -149,7 +162,7 @@
 
     init();
 
-    var value1 = <%=course.getId()%>;
+    var value1 = "<%=course.getId()%>";
     var time1 = "l" + (new Date()).getTime();
 
     //输入的内容localStorage有记录
@@ -164,10 +177,12 @@
             }
         }
         if (flag) {
-            if (hisItem1.length > 20) {
+            if (hisItem1.length > 2) {
                 firstKey1 = hisTime1[0];
                 localStorage.removeItem(firstKey1);
+                console.log(firstKey1);
                 localStorage.setItem(time1, value1);
+                <%System.out.println("nbbnbnbnbnbn");%>
             } else {
                 localStorage.setItem(time1, value1)
             }

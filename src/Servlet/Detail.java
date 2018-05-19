@@ -16,6 +16,8 @@ public class Detail extends HttpServlet {
         response.setContentType("text/html; charset=UTF-8");
         String id =request.getParameter("id");
         request.setAttribute("id",id);
+        String f =request.getParameter("f");
+        request.setAttribute("f",f);
         request.getRequestDispatcher(jsp).forward(request, response);
     }
 }

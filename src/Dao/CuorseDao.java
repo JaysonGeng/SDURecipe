@@ -75,12 +75,15 @@ public class CuorseDao {
         }
         ArrayList<Course> list = new ArrayList<Course>();
         try {
-            for (Tuijian t : TuijianList) {
-                Course course = null;
-                course = getCourseById(Integer.valueOf(t.getId_tuijian()));
-                course.setReason(t.getReason());
-                list.add(course);
+            if (list != null) {
+                for (Tuijian t : TuijianList) {
+                    Course course = null;
+                    course = getCourseById(Integer.valueOf(t.getId_tuijian()));
+                    course.setReason(t.getReason());
+                    list.add(course);
+                }
             }
+
             return list;
         } catch (Exception ex) {
             ex.printStackTrace();

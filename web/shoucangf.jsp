@@ -14,10 +14,10 @@
     CuorseDao cuorseDao = new CuorseDao();
 
     String idss = request.getParameter("ids");
-    System.out.println("idss   " + idss);
+//    System.out.println("idss   " + idss);
 
     String idls = request.getParameter("idl");
-    System.out.println("idls   " + idls);
+//    System.out.println("idls   " + idls);
 
     String[] ids = null;
     String[] idl = null;
@@ -59,6 +59,7 @@
     }
 
 %>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -182,16 +183,13 @@
 
                                 var input = document.getElementById('feedbackinput');
                                 var qq = document.getElementById("qq");
-                                var phone =document.getElementById("phone");
+                                var phone = document.getElementById("phone");
 
                                 input.value = "";
-                                input.onfocus = function () {
-                                    window.location.href="./"
-
-                                    input.value = "";
-                                    qq.value = "";
-                                    phone.value = "";
-                                }
+                                // input.onfocus = function () {
+                                //     input.value = "";
+                                //
+                                // }
                             </script>
                         </div>
                     </div>
@@ -228,6 +226,12 @@
             myApp.alert('请输入您的意见后再提交哦！', '提示');
         }
         else {
+            $.ajax({
+                type:"GET",
+                url:"/Servlet.FankuiServlet",
+                data:{content:content.val(),qq:qq.val(),phone:phone.val()},
+            });
+
             $.showPreloader('提交中')
             setTimeout(function () {
                 $.hidePreloader();
@@ -236,7 +240,7 @@
                 content.value = '';
                 qq.value = '';
                 phone.value = '';
-            }, 1500);
+            }, 1000);
         }
     }
 </script>
@@ -249,13 +253,14 @@
 
     var ulll = document.getElementById("shoucang");
     <%
-        for (Course cs : coursess ) {
+        for (int i = coursess.size()-1;i>=0;i-- ) {
+            Course cs =coursess.get(i);
     %>
     var liii = document.createElement('li');
 
     liii.innerHTML = '<li class="swipeout">' +
-        '<a href="./Servlet.Detail?id=<%=cs.getId()%>" class="item-link item-content external">' +
-        '<div class="item-media">' +
+        '<a href="./Servlet.Detail?id=<%=cs.getId()%>&f=s" class="item-link item-content external">' +
+        '<div class="item-media" style="top: 0;bottom: 0;left: 0;right: 0;margin: auto;">' +
         '<img src="<%=cs.getPic()%>" style=\'width: 4rem;\'>' +
         '</div>' +
         '<div class="item-inner">' +
@@ -287,14 +292,15 @@
     var ull = document.getElementById("lishi");
 
     <%
-        for (Course cl : coursesl ) {
+        for (int i = coursesl.size()-1;i>=0;i-- ) {
+            Course cl =coursesl.get(i);
     %>
 
     var lii = document.createElement('li');
 
     lii.innerHTML = '<li class="swipeout">' +
-        '<a href="./Servlet.Detail?id=<%=cl.getId()%>" class="item-link item-content external">' +
-        '<div class="item-media">' +
+        '<a href="./Servlet.Detail?id=<%=cl.getId()%>&f=s" class="item-link item-content external">' +
+        '<div class="item-media" style="top: 0;bottom: 0;left: 0;right: 0;margin: auto;">' +
         '<img src="<%=cl.getPic()%>" style=\'width: 4rem;\'>' +
         '</div>' +
         '<div class="item-inner">' +

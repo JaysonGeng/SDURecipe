@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- meta标签设置-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+     maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- app标题 -->
+    <title>hangge.com</title>
+    <!-- 使用iOS CSS主题样式-->
+    <link rel="stylesheet" href="dist/css/framework7.ios.css">
+    <link rel="stylesheet" href="dist/css/framework7.ios.colors.css">
+
+    <!-- 自定义样式-->
+    <link rel="stylesheet" href="css/my-app.css">
+</head>
+<body>
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- 所有的Views视图 -->
+<div class="views">
+    <!-- 主视图（需要有"view-main"样式） -->
+    <div class="view view-main">
+        <!-- 顶部导航栏 -->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <!-- 标题元素（为了让页面切换时标题文字有滑动效果，添加sliding样式） -->
+                <div class="center sliding">hangge.com</div>
+            </div>
+        </div>
+        <!-- 页面容器（Pages container）由于我们使用了固定位置的navbar和toolbar，
+              所以这里添加额外样式（navbar-through和toolbar-through）-->
+        <div class="pages navbar-through toolbar-through">
+            <!-- 首页, "data-page" 里设置页面名字 -->
+            <div data-page="index" class="page">
+                <div id="articles" class="page-content pull-to-refresh-content">
+                    <!-- 下拉刷新层 -->
+                    <div class="pull-to-refresh-layer">
+                        <div class="preloader">
+
+                        </div>
+                        <div class="pull-to-refresh-arrow"></div>
+                    </div>
+                    <!-- 列表 -->
+                    <div class="list-block">
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Framework7框架的js-->
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<!-- 你的应用的js-->
+<script type="text/javascript">
+
+    // 初始化 app
+    var myApp = new Framework7({
+        init: false //禁用App的自动初始化功能
+    });
+
+    // 为便于使用，自定义DOM库名字为$$
+    var $$ = Dom7;
+
+    // 添加首页视图
+    var mainView = myApp.addView('.view-main', {
+        // 让这个视图支持动态导航栏
+        dynamicNavbar: true,
+    });
+
+    //index页面初始化
+    myApp.onPageInit('index', function (page) {
+        //初始数据
+        refreshData();
+        //下拉刷新
+        $$('#articles').on('refresh', function (e) {
+            //为更好的看到效果，这里加个延时
+            setTimeout(refreshData,700);
+        });
+    });
+
+    //刷新数据
+    function refreshData() {
+        setTimeout(refreshData,1000);
+        window.location.href="gotoshoucang.jsp";
+    }
+
+    //初始化应用
+    myApp.init();
+
+
+</script>
+</body>
+</html>
