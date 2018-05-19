@@ -34,7 +34,6 @@
     if (ids != null) {
         for (String index : ids) {
             if (index != null && !index.equals("")) {
-                System.out.println("index ids: " + index);
                 String[] idsn = index.split(",");
                 course = cuorseDao.getCourseById(Integer.valueOf(idsn[1]));
                 course.setLoc_name(idsn[0]);
@@ -48,7 +47,6 @@
     if (idl != null) {
         for (String index : idl) {
             if (index != null && !index.equals("")) {
-                System.out.println("index idl: " + index);
                 String[] idln = index.split(",");
                 course = cuorseDao.getCourseById(Integer.valueOf(idln[1]));
                 course.setLoc_name(idln[0]);
@@ -222,6 +220,7 @@
     var feed = document.getElementById('feedback');
 
     feed.onclick = function () {
+
         if (content.value == '') {
             myApp.alert('请输入您的意见后再提交哦！', '提示');
         }
@@ -229,7 +228,7 @@
             $.ajax({
                 type:"GET",
                 url:"/Servlet.FankuiServlet",
-                data:{content:content.val(),qq:qq.val(),phone:phone.val()},
+                data:{content:content.value,qq:qq.value,phone:phone.value},
             });
 
             $.showPreloader('提交中')

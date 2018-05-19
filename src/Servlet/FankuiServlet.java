@@ -1,5 +1,7 @@
 package Servlet;
 
+import Dao.FankuiDao;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,12 +11,15 @@ import java.io.IOException;
 
 @WebServlet(name = "FankuiServlet")
 public class FankuiServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request,response);
+
+        String content = request.getParameter("content");
+        String qq = request.getParameter("qq");
+        String phone = request.getParameter("phone");
+
+        FankuiDao fankuiDao =new FankuiDao();
+        fankuiDao.postfankui(content,qq,phone);
+
     }
 }
