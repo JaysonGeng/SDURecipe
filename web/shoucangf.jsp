@@ -227,7 +227,7 @@
         else {
             $.ajax({
                 type:"GET",
-                url:"/Servlet.FankuiServlet",
+                url:"./Servlet.FankuiServlet",
                 data:{content:content.value,qq:qq.value,phone:phone.value},
             });
 

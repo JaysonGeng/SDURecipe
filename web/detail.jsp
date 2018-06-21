@@ -182,10 +182,10 @@
                 localStorage.removeItem(firstKey1);
                 console.log(firstKey1);
                 localStorage.setItem(time1, value1);
-                <%System.out.println("nbbnbnbnbnbn");%>
             } else {
                 localStorage.setItem(time1, value1)
             }
+
         }
     }
     init();
