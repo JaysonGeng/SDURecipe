@@ -88,20 +88,20 @@
         <header class="bar bar-nav" style="background-color: #e82100;position: fixed;top: 0">
             <h1 class="title" style="color: #fafafa">我的收藏</h1>
         </header>
-        <nav class="bar bar-tab">
-            <a class="tab-item external " href="./index.jsp">
-                <span class="icon icon-home"></span>
-                <span class="tab-label">首页</span>
-            </a>
-            <a class="tab-item external " href="./caipu.jsp">
-                <span class="icon icon-app"></span>
-                <span class="tab-label">菜谱</span>
-            </a>
-            <a class="tab-item external active" href="./gotoshoucang.jsp">
-                <span class="icon icon-star"></span>
-                <span class="tab-label">收藏</span>
-            </a>
-        </nav>
+        <%--<nav class="bar bar-tab">--%>
+            <%--<a class="tab-item external " href="./index.jsp">--%>
+                <%--<span class="icon icon-home"></span>--%>
+                <%--<span class="tab-label">首页</span>--%>
+            <%--</a>--%>
+            <%--<a class="tab-item external " href="./caipu.jsp">--%>
+                <%--<span class="icon icon-app"></span>--%>
+                <%--<span class="tab-label">菜谱</span>--%>
+            <%--</a>--%>
+            <%--<a class="tab-item external active" href="./gotoshoucang.jsp">--%>
+                <%--<span class="icon icon-star"></span>--%>
+                <%--<span class="tab-label">收藏</span>--%>
+            <%--</a>--%>
+        <%--</nav>--%>
         <div class="content" style="background: white">
             <div class="buttons-tab ">
                 <a href="#tab1" class="tab-link active button">美食收藏</a>

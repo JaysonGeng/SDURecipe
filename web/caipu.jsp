@@ -35,20 +35,20 @@
         </header>
 
         <!-- 工具栏 -->
-        <nav class="bar bar-tab">
-            <a class="tab-item external " href="./index.jsp">
-                <span class="icon icon-home"></span>
-                <span class="tab-label">首页</span>
-            </a>
-            <a class="tab-item external active" href="./caipu.jsp">
-                <span class="icon icon-app"></span>
-                <span class="tab-label">菜谱</span>
-            </a>
-            <a class="tab-item external" href="./gotoshoucang.jsp">
-                <span class="icon icon-star"></span>
-                <span class="tab-label">收藏</span>
-            </a>
-        </nav>
+        <%--<nav class="bar bar-tab">--%>
+            <%--<a class="tab-item external " href="./index.jsp">--%>
+                <%--<span class="icon icon-home"></span>--%>
+                <%--<span class="tab-label">首页</span>--%>
+            <%--</a>--%>
+            <%--<a class="tab-item external active" href="./caipu.jsp">--%>
+                <%--<span class="icon icon-app"></span>--%>
+                <%--<span class="tab-label">菜谱</span>--%>
+            <%--</a>--%>
+            <%--<a class="tab-item external" href="./gotoshoucang.jsp">--%>
+                <%--<span class="icon icon-star"></span>--%>
+                <%--<span class="tab-label">收藏</span>--%>
+            <%--</a>--%>
+        <%--</nav>--%>
 
         <!-- 这里是页面内容区 -->
         <div class="content">
